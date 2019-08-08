@@ -3,7 +3,6 @@ package com.mad.mad_app;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.widget.CardView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -18,9 +17,13 @@ import android.view.MenuItem;
 public class CategoryPage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    public void goToCoversList() {
+    public void getItemList(String categortname) {
         Intent i = new Intent(this, MainActivity.class);
-        i.putExtra("category","covers");
+
+        i.putExtra("category",categortname);
+
+
+
         startActivity(i);
 
     }
@@ -51,14 +54,42 @@ public class CategoryPage extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+
+        // go to spekers view
+        CardView speker = (CardView)findViewById(R.id.cardView4) ;
+
+        speker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getItemList("speaker");
+            }
+        });
         // go to covers view
         CardView covers = (CardView) findViewById(R.id.cardView7);
+
         covers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToCoversList();
+                getItemList("covers");
             }
         });
+        // go to chargers view
+        CardView chargers = (CardView)findViewById(R.id.cardView6) ;
+        chargers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getItemList("charger");
+            }
+        });
+        //goto memory view
+        CardView memory = (CardView)findViewById(R.id.cardView5) ;
+        chargers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getItemList("memory");
+            }
+        });
+
     }
 
     public void goToShoppingCart() {

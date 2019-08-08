@@ -2,8 +2,6 @@ package com.mad.mad_app;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -48,16 +46,16 @@ public class ItemView extends AppCompatActivity {
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Item item = new Item(itemName,itemDesc, itemPrice);
-                addToCart(item);
+                dItem dItem = new dItem(itemName,itemDesc, itemPrice);
+                addToCart(dItem);
             }
         });
     }
 
-    public void addToCart(Item item){
-        CartItem cartItem = new CartItem(item,1);
-        ShoppingCart.addToCart(cartItem);
-        Toast t = Toast.makeText(this, "Item added successfully!", Toast.LENGTH_LONG);
+    public void addToCart(dItem dItem){
+        dCartItem dCartItem = new dCartItem(dItem,1);
+        ShoppingCart.addToCart(dCartItem);
+        Toast t = Toast.makeText(this, "dItem added successfully!", Toast.LENGTH_LONG);
         t.show();
         goToCategoryPage();
     }

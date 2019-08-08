@@ -1,25 +1,23 @@
 package com.mad.mad_app;
 
-import android.widget.Toast;
-
 import java.util.ArrayList;
 
 public class ShoppingCart {
 
-    public static ArrayList<CartItem> cart = new ArrayList<>();
+    public static ArrayList<dCartItem> cart = new ArrayList<>();
 
     public ShoppingCart() {
     }
 
-    public static void addToCart(CartItem item){
+    public static void addToCart(dCartItem item){
         cart.add(item);
 
     }
-    public static ArrayList<CartItem> getCart(){
+    public static ArrayList<dCartItem> getCart(){
         return cart;
     }
 
-    public static void removeFromCart(CartItem item) {
+    public static void removeFromCart(dCartItem item) {
         cart.remove(item);
     }
 }

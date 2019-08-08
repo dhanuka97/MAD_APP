@@ -32,7 +32,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/dcover" />
 
             <TextView
                 android:id="@+id/textView30"
@@ -41,7 +41,7 @@
                 android:layout_marginStart="21dp"
                 android:layout_marginEnd="22dp"
                 android:layout_marginBottom="10dp"
-                android:text="Covers"
+                android:text="@string/catagory_cover"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +73,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/charger" />
 
             <TextView
                 android:id="@+id/textView29"
@@ -82,7 +82,7 @@
                 android:layout_marginStart="21dp"
                 android:layout_marginEnd="22dp"
                 android:layout_marginBottom="10dp"
-                android:text="Chargers"
+                android:text="@string/category_chargers"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -97,7 +97,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="36dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -114,7 +114,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/dsd" />
 
             <TextView
                 android:id="@+id/textView28"
@@ -123,7 +123,7 @@
                 android:layout_marginStart="21dp"
                 android:layout_marginEnd="22dp"
                 android:layout_marginBottom="10dp"
-                android:text="Memory Cards"
+                android:text="@string/category_memory"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -151,11 +151,12 @@
                 android:layout_marginStart="21dp"
                 android:layout_marginTop="6dp"
                 android:layout_marginEnd="22dp"
+
                 app:layout_constraintBottom_toTopOf="@+id/textView27"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@drawable/speaker" />
 
             <TextView
                 android:id="@+id/textView27"
@@ -164,7 +165,7 @@
                 android:layout_marginStart="21dp"
                 android:layout_marginEnd="22dp"
                 android:layout_marginBottom="10dp"
-                android:text="Speakers"
+                android:text="@string/category_speakers"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"

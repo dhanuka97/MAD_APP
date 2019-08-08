@@ -1,7 +1,6 @@
 package com.mad.mad_app;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,12 +12,12 @@ import android.widget.Toast;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-class CartItemListAdapter extends ArrayAdapter<CartItem> {
+class dCartItemListAdapter extends ArrayAdapter<dCartItem> {
     private Context context;
     private int resource;
     private Callable deleteCallback;
 
-    public CartItemListAdapter(Context context, int resource, List<CartItem> objects, Callable deleteCallback) {
+    public dCartItemListAdapter(Context context, int resource, List<dCartItem> objects, Callable deleteCallback) {
         super(context, resource, objects);
         this.resource =resource;
         this.context = context;
@@ -30,11 +29,11 @@ class CartItemListAdapter extends ArrayAdapter<CartItem> {
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
 
-        Item item = getItem(position).getItem();
+        dItem dItem = getItem(position).getdItem();
 
-        String name = item.getItemName();
+        String name = dItem.getItemName();
         int quantity = getItem(position).getQuntity();
-        double price = item.getPrice();
+        double price = dItem.getPrice();
         double subTotal = price * quantity;
 
         LayoutInflater inflater = LayoutInflater.from(context);
@@ -63,7 +62,7 @@ class CartItemListAdapter extends ArrayAdapter<CartItem> {
         return convertView;
     }
 
-    public void removeCartitem(CartItem item) {
+    public void removeCartitem(dCartItem item) {
         ShoppingCart.removeFromCart(item);
         Toast t = Toast.makeText(this.context , "Successfully deleted!", Toast.LENGTH_LONG);
         t.show();

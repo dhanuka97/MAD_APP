@@ -1,11 +1,7 @@
 package com.mad.mad_app;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -13,16 +9,16 @@ import java.util.concurrent.Callable;
 
 public class ShoppingCartPage extends AppCompatActivity {
 
-    ArrayList<CartItem> cartItemList = new ArrayList<CartItem>();
+    ArrayList<dCartItem> dCartItemList = new ArrayList<dCartItem>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_cart_page);
 
-        cartItemList = ShoppingCart.getCart();
+        dCartItemList = ShoppingCart.getCart();
 
-        CartItemListAdapter adap = new CartItemListAdapter(this,
+        dCartItemListAdapter adap = new dCartItemListAdapter(this,
                 R.layout.cart_item, ShoppingCart.getCart(), new Callable() {
             @Override
             public Object call() throws Exception {
@@ -37,7 +33,7 @@ public class ShoppingCartPage extends AppCompatActivity {
 //            @Override
 //            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 //                Log.d("item", Integer.toString(position));
-//                Item selectedItem = (Item)parent.getItemAtPosition(position);
+//                dItem selectedItem = (dItem)parent.getItemAtPosition(position);
 //                goToItemView(selectedItem);
 //            }
 //        });

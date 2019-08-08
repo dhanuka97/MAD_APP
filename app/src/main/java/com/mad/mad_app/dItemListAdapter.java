@@ -9,12 +9,12 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class ItemListAdapter extends ArrayAdapter<Item> {
+public class dItemListAdapter extends ArrayAdapter<dItem> {
     private Context context;
     private int resource;
 
 
-    public ItemListAdapter(Context context, int resource, List<Item> objects) {
+    public dItemListAdapter(Context context, int resource, List<dItem> objects) {
         super(context, resource, objects);
         this.resource =resource;
         this.context = context;
@@ -29,7 +29,7 @@ public class ItemListAdapter extends ArrayAdapter<Item> {
         double price = getItem(position).getPrice();
 
 
-        Item item = new Item(dec,name,price);
+        dItem dItem = new dItem(dec,name,price);
 
         LayoutInflater inflater = LayoutInflater.from(context);
         convertView = inflater.inflate(resource,parent,false);

@@ -2,14 +2,14 @@ package com.mad.mad_app;
 
 import android.support.annotation.NonNull;
 
-public class Item {
+public class dItem {
     private String itemName;
     private String desc;
     private double price;
 
-    public Item() {}
+    public dItem() {}
 
-    public Item(String name, String desc, double price){
+    public dItem(String name, String desc, double price){
         this.itemName = name;
         this.desc = desc;
         this.price = price;
